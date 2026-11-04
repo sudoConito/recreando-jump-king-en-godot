@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c0l008554mubm"]
+
+[ext_resource type="PackedScene" uid="uid://b47nqklm7mccr" path="res://escenas/muro.tscn" id="1_68qs1"]
+[ext_resource type="PackedScene" uid="uid://brdkp5d0slbni" path="res://escenas/piso.tscn" id="2_5clcp"]
+[ext_resource type="PackedScene" uid="uid://c5ser12jrroux" path="res://escenas/personaje.tscn" id="3_5clcp"]
+
+[node name="mundo1" type="Node2D" unique_id=112310300]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1527353807]
+
+[node name="muro" parent="." unique_id=636997579 instance=ExtResource("1_68qs1")]
+position = Vector2(-147, 53)
+
+[node name="piso" parent="." unique_id=1111491589 instance=ExtResource("2_5clcp")]
+position = Vector2(3, 193)
+
+[node name="muro2" parent="." unique_id=425246795 instance=ExtResource("1_68qs1")]
+position = Vector2(254, 136)
+
+[node name="piso2" parent="." unique_id=1406001214 instance=ExtResource("2_5clcp")]
+position = Vector2(-297, -30)
+
+[node name="personaje" parent="." unique_id=850367979 instance=ExtResource("3_5clcp")]
+position = Vector2(50, 0)

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5ser12jrroux"]
+
+[ext_resource type="Script" uid="uid://m1g7egbxbmjh" path="res://scripts/personaje.gd" id="1_v023a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvskb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_c6wpt"]
+
+[node name="personaje" type="CharacterBody2D" unique_id=850367979]
+scale = Vector2(2, 2)
+script = ExtResource("1_v023a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1180615549]
+modulate = Color(0.82356536, 0, 0.14210358, 1)
+shape = SubResource("RectangleShape2D_dvskb")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=1765160673]
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_c6wpt")
