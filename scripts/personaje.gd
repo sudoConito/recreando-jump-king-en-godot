@@ -5,7 +5,7 @@ var JUMP_VELOCITY = -400.0
 @onready var presionando=false
 #variable de tiempo de presion para medir la fuerza de salto
 var tiempo=0
-var fuerzaDeSalto=150
+var fuerzaDeSalto=250#escrito desde pc vieja
 #hacer el sistema de jump king al mantener presionado el boton de saltar que sea por tiempo y mientras mas mantienes presionado mas alto saltara fin
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
