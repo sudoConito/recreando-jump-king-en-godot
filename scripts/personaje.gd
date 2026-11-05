@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#no tocar por favor esto es en la laptop buena
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 @onready var presionando=false
@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+	#aqui documentando que si presionas puedes obtener mas fuerza al saltar
 	if presionando:
 		print(tiempo)
 		if tiempo<2:
