@@ -3,13 +3,15 @@ extends CharacterBody2D
 var SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 @onready var presionando=false
+#variable de tiempo de presion para medir la fuerza de salto
 var tiempo=0
-var fuerzaDeSalto=150
+var fuerzaDeSalto=450#es 150 escrito desde pc nueva
 #hacer el sistema de jump king al mantener presionado el boton de saltar que sea por tiempo y mientras mas mantienes presionado mas alto saltara fin
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	#boton que presionas para saltar
 	if Input.is_action_just_pressed("saltar")and is_on_floor():
 		presionando=true
 	if not presionando:
