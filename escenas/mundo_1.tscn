@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b47nqklm7mccr" path="res://escenas/muro.tscn" id="1_68qs1"]
 [ext_resource type="PackedScene" uid="uid://brdkp5d0slbni" path="res://escenas/piso.tscn" id="2_5clcp"]
 [ext_resource type="PackedScene" uid="uid://c5ser12jrroux" path="res://escenas/personaje.tscn" id="3_5clcp"]
+[ext_resource type="PackedScene" uid="uid://bkiet7e1w66vp" path="res://escenas/visual_canvas.tscn" id="4_hu0ti"]
 
 [node name="mundo1" type="Node2D" unique_id=112310300]
 
@@ -22,3 +23,5 @@ position = Vector2(-297, -30)
 
 [node name="personaje" parent="." unique_id=850367979 instance=ExtResource("3_5clcp")]
 position = Vector2(50, 0)
+
+[node name="visualCanvas" parent="." unique_id=2114933578 instance=ExtResource("4_hu0ti")]

@@ -1,19 +1,84 @@
 [gd_scene format=3 uid="uid://c5ser12jrroux"]
 
 [ext_resource type="Script" uid="uid://m1g7egbxbmjh" path="res://scripts/personaje.gd" id="1_v023a"]
+[ext_resource type="Texture2D" uid="uid://skegpq2itpap" path="res://base.png" id="2_5nfxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dvskb"]
+size = Vector2(27, 27)
 
-[sub_resource type="QuadMesh" id="QuadMesh_c6wpt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nfxw"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(331, 62, 27, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcw2a"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(234, 21, 24, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40a7a"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(232, 68, 31, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg0f4"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(276, 21, 46, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt8tj"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(368, 21, 46, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im2y8"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(322, 21, 46, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvskb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nfxw")
+}],
+"loop": 1,
+"name": &"cayendo",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcw2a")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40a7a")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg0f4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt8tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im2y8")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}]
 
 [node name="personaje" type="CharacterBody2D" unique_id=850367979]
 scale = Vector2(2, 2)
 script = ExtResource("1_v023a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1180615549]
-modulate = Color(0.82356536, 0, 0.14210358, 1)
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_dvskb")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=1765160673]
-scale = Vector2(20, 20)
-mesh = SubResource("QuadMesh_c6wpt")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=679119414]
+sprite_frames = SubResource("SpriteFrames_dvskb")
+animation = &"cayendo"
