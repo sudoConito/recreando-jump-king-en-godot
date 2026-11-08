@@ -5,32 +5,61 @@
 [node name="visualCanvas" type="CanvasLayer" unique_id=2114933578]
 
 [node name="VSlider" type="VSlider" parent="." unique_id=954534145]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -72.00012
+offset_top = -141.0
+offset_right = -56.000122
+offset_bottom = -41.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.7, 1.7)
+max_value = 2.0
+step = 0.0
+
+[node name="Control" type="Control" parent="." unique_id=1177385588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control" unique_id=2022560619]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="izquierda" type="TouchScreenButton" parent="Control/Control" unique_id=1330252800]
+position = Vector2(57, -174)
+texture_normal = ExtResource("1_67gy8")
+action = "izquierda"
+
+[node name="derecha" type="TouchScreenButton" parent="Control/Control" unique_id=1457451003]
+position = Vector2(239, -174)
+texture_normal = ExtResource("1_67gy8")
+action = "derecha"
+
+[node name="Control2" type="Control" parent="Control" unique_id=146069226]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -426.00006
-offset_right = -64.0
-offset_bottom = -326.00006
+offset_left = -40.0
+offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(1.7, 1.7)
-max_value = 2.0
-step = 0.0
 
-[node name="izquierda" type="TouchScreenButton" parent="." unique_id=1330252800]
-position = Vector2(51, 461)
-texture_normal = ExtResource("1_67gy8")
-action = "izquierda"
-
-[node name="derecha" type="TouchScreenButton" parent="." unique_id=1457451003]
-position = Vector2(241, 461)
-texture_normal = ExtResource("1_67gy8")
-action = "derecha"
-
-[node name="saltar" type="TouchScreenButton" parent="." unique_id=1113557139]
-position = Vector2(996, 461)
+[node name="saltar" type="TouchScreenButton" parent="Control/Control2" unique_id=1113557139]
+position = Vector2(-176, -174)
 texture_normal = ExtResource("1_67gy8")
 action = "saltar"
