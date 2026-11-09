@@ -10,6 +10,10 @@ size = Vector2(27, 27)
 atlas = ExtResource("2_5nfxw")
 region = Rect2(331, 62, 27, 40)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tupa7"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(235, 115, 27, 29)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_mcw2a"]
 atlas = ExtResource("2_5nfxw")
 region = Rect2(234, 21, 24, 27)
@@ -30,6 +34,14 @@ region = Rect2(368, 21, 46, 27)
 atlas = ExtResource("2_5nfxw")
 region = Rect2(322, 21, 46, 27)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h42ap"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(280, 63, 27, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57ngn"]
+atlas = ExtResource("2_5nfxw")
+region = Rect2(331, 61, 27, 35)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dvskb"]
 animations = [{
 "frames": [{
@@ -38,7 +50,15 @@ animations = [{
 }],
 "loop": 1,
 "name": &"cayendo",
-"speed": 1.0
+"speed": 3.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tupa7")
+}],
+"loop": 1,
+"name": &"choque",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -69,6 +89,17 @@ animations = [{
 "loop": 1,
 "name": &"run",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h42ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57ngn")
+}],
+"loop": 0,
+"name": &"saltando",
+"speed": 3.5
 }]
 
 [node name="personaje" type="CharacterBody2D" unique_id=850367979]
@@ -81,4 +112,4 @@ shape = SubResource("RectangleShape2D_dvskb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=679119414]
 sprite_frames = SubResource("SpriteFrames_dvskb")
-animation = &"cayendo"
+animation = &"choque"
